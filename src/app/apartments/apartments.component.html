@@ -1,0 +1,15 @@
+<h2>list appartement </h2>
+
+<table class="table">
+    
+    <ul *ngFor="let a of listApartments">
+        <li>id {{a.id}}</li>
+        <li>appartNum :{{a.appartNum}}</li>
+        <li>category :{{a.category}}</li>
+        <button class="btn btn-outline-danger" (click)="details(a.id)">Details</button>
+        <a [routerLink]="['/detailsApp', a.id]">Détails</a>
+    </ul>
+    <a class="nav-link" class="btn btn-outline-warning" routerLink="/residance">Home </a>
+
+
+</table>

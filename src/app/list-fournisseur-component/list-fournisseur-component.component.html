@@ -1,0 +1,14 @@
+<p>list-fournisseur-component works!</p>
+<div *ngFor="let i of list; let f = index">
+    <br>
+    <hr>
+    <div *ngIf="i.idFournisseur<100">
+        <fieldset [ngStyle]="{'background-color': i.libelle === 'hp' ? 'green' : 'yellow' ,'font-weight':getcolor(i.code) } "
+        (dblclick)="deletefournisser(f)"  >
+
+    <p>idFournisseur: {{i.idFournisseur}} </p>
+    <p>code: {{i.code}}</p>
+    <p>libelle :{{i.libelle}} </p>
+    </fieldset>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let apartment of listApartments">
+        <div class="container">
+            <h2>Détails de l'appartement</h2>
+            <br>
+            <p>ID de l'appartement: {{ apartment.id }}</p>
+          </div>
+        <div class="card mb-3">
+          <img [src]="apartment.residence.image" class="card-img-top" alt="Residence Image">
+          <div class="card-body">
+            <h5 class="card-title">Categorie : {{ apartment.category }}</h5>
+            <p class="card-text">Numéro d'appartement: {{ apartment.appartNum }}</p>
+            <p class="card-text">Surface: {{ apartment.surface }} m²</p>
+            <p class="card-text">Terrasse: {{ apartment.terrace ? 'Oui' : 'Non' }}</p>
+            <p class="card-text">Description: {{ apartment.description }}</p>
+            <a class="btn btn-outline-danger" [routerLink]="['/appartement', apartment.id]">Retour</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

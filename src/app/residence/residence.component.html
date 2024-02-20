@@ -1,0 +1,24 @@
+<p>residence works!</p>
+<div *ngFor="let y of listResidences">
+    <hr>
+    <p>id {{y.id}}</p>
+    <p>name {{y.name}}</p>
+    <p>adress {{y.address}}</p>
+    <p>image {{y.image}}</p>
+    <button class="btn btn-outline-danger" (click)="showAPP(y.id)">Show apartments</button>
+    <a [routerLink]="['/appartement', y.id]">Show</a>
+</div>
+<h2>list appartement </h2>
+
+<table class="table">
+    
+    <ul *ngFor="let a of listApartments">
+        <li>id {{a.id}}</li>
+        <li>appartNum :{{a.appartNum}}</li>
+        <li>category :{{a.category}}</li>
+        <button class="btn btn-primary" (click)="like(a)">Like</button>
+
+    </ul>
+
+
+</table>
