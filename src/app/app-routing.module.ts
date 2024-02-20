@@ -13,7 +13,7 @@ const routes: Routes = [
     {path:'appartement/:id',component:ApartmentsComponent},
     {path:'addappartement', component:FormAppartmentComponent},
     {path:'404',component:NotFoundComponent},
-    {path: '**', redirectTo :'404'},
+    //{path: '**', redirectTo :'404'},
     {path:'detailsApp/:id', component :DetailAppartmentComponent}
    
     
